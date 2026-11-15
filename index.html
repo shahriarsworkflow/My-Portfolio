@@ -302,5 +302,9 @@ if(rm){ready();if(L)L.remove()}else{if(d.readyState==='complete')finish();else a
 function burst(x,y){var r=d.createElement('span');r.className='rip';r.style.left=x+'px';r.style.top=y+'px';d.body.appendChild(r);setTimeout(function(){r.remove()},750);var cols=['#FFBB00','#FF4343','#fff','#FFBB00','#FF4343','#fff'];for(var i=0;i<6;i++){var s=d.createElement('span'),a=Math.PI*2*i/6+Math.random()*.5,k=26+Math.random()*16;s.className='sp';s.style.left=x+'px';s.style.top=y+'px';s.style.background=cols[i];s.style.setProperty('--dx',Math.cos(a)*k+'px');s.style.setProperty('--dy',Math.sin(a)*k+'px');d.body.appendChild(s);(function(n){setTimeout(function(){n.remove()},700)})(s)}}
 if(!rm)addEventListener('pointerdown',function(e){burst(e.clientX,e.clientY)});
 })();</script>
+<script type="module">
+import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@2.1.0/+esm';
+injectSpeedInsights();
+</script>
 </body>
 </html>
